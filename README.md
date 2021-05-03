@@ -6,6 +6,8 @@ The doxygen documentation is provided. To view the .html version, open the ``doc
 
 The current initial conditions functions available can be found the ``initial_conditions.hpp`` file. The default initial conditions function is the ``hat_function`` from this file. To switch to a different function, simply invoke the mesh constructor with its name.
 
+To code validation cases are explained in the ``tests`` folder.
+
 ## To compile and run
 
 The project is written in c++, at the moment only using the c++11 standard. Currently the project only has header files and can be compiled with gcc with a simple one line command:

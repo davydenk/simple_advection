@@ -32,3 +32,16 @@ void const_function(std::vector<T>& data){
   std::fill(data.begin(),data.end(),0.5);
 }
 
+/*!This function is used for testing. Do not modify it without modifying the related result test function.
+ * 
+ */
+template <typename T>
+void cos_function(std::vector<T>& data){
+  T pi{3.14159265358979323846};
+  for(size_t i=0;i<data.size();++i){
+    data[i]= std::cos(2*pi*i/data.size());      
+  }
+
+}
+
+

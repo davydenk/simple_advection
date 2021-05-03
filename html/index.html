@@ -68,6 +68,7 @@ $(function() {
 <div class="textblock"><p>This code performs a simple advection simulation in 1 dimention using the first order <a href="https://en.wikipedia.org/wiki/Upwind_scheme">upwind scheme</a>.</p>
 <p>The doxygen documentation is provided. To view the .html version, open the <code>documenation.html</code> file in any browser. The doxygen file <code>doxy.in</code> is included in the root folder.</p>
 <p>The current initial conditions functions available can be found the <code><a class="el" href="initial__conditions_8hpp_source.html">initial_conditions.hpp</a></code> file. The default initial conditions function is the <code>hat_function</code> from this file. To switch to a different function, simply invoke the mesh constructor with its name.</p>
+<p>To code validation cases are explained in the <code>tests</code> folder.</p>
 <h2>To compile and run</h2>
 <p>The project is written in c++, at the moment only using the c++11 standard. Currently the project only has header files and can be compiled with gcc with a simple one line command: </p><pre class="fragment">g++ main.cpp -o advection.x -Iinclude
 </pre><p>However, the <a href="https://mesonbuild.com/Manual.html">meson</a> configuration file is also provided . To compile the project with meson, do: </p><pre class="fragment">meson build (in the top directory)
