@@ -68,13 +68,76 @@ $(function() {
 <div class="title">CSolver&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="solver_8hpp_source.html">solver.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c7d5a891aec27006c526ea13b0e7c53"><td class="memItemLeft" align="right" valign="top"><a id="a3c7d5a891aec27006c526ea13b0e7c53"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>FOU</b> (<a class="el" href="classCMesh.html">CMesh</a>&lt; T &gt; &amp;m, const T &amp;eq_coeff, const T &amp;time_step, const size_t &amp;Nsteps, const size_t &amp;PrintInterval=0)</td></tr>
+<tr class="memitem:a3c7d5a891aec27006c526ea13b0e7c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCSolver.html#a3c7d5a891aec27006c526ea13b0e7c53">FOU</a> (<a class="el" href="classCMesh.html">CMesh</a>&lt; T &gt; &amp;m, const T &amp;eq_coeff, const T &amp;time_step, const size_t &amp;Nsteps, const size_t &amp;PrintInterval=0)</td></tr>
 <tr class="separator:a3c7d5a891aec27006c526ea13b0e7c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class CSolver&lt; T &gt;</h3>
+
+<p>The class is used for solving the equation by applying a chosen descreete scheme to the mesh data. The schemes curently available are: <br />
+- first order upwind scheme </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3c7d5a891aec27006c526ea13b0e7c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7d5a891aec27006c526ea13b0e7c53">&#9670;&nbsp;</a></span>FOU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCSolver.html">CSolver</a>&lt; T &gt;::FOU </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCMesh.html">CMesh</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>eq_coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>time_step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>Nsteps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>PrintInterval</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function applies the first order upwind scheme to the mesh data. The basic scheme info can be found in en.wikipedia.org/wiki/Upwind_scheme. Parameters used:</p><ul>
+<li>a reference to a mesh variable</li>
+<li>advection equation coefficient</li>
+<li>time step</li>
+<li>the number of steps</li>
+<li>PritInterval for the output, if set to 0, no intermidiate output occurs. Currently, the output is performed in text format, so it is not adviced to print too many steps. The intermidiate output files are written to the "gif_dir" folder with the names "TIME_STEP.dat". The final output is printed to the "result.txt" file. </li>
+</ul>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="solver_8hpp_source.html">solver.hpp</a></li>
 </ul>

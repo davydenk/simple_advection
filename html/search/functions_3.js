@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['read',['read',['../classCParams.html#a69eb70e63aa95827b93c55d59eab6e95',1,'CParams']]],
-  ['reset',['reset',['../classCMesh.html#a07e3a824f511675fcbbff1788a27c83f',1,'CMesh']]]
+  ['print',['print',['../classCParams.html#a05a4486f925e1a347dea2f4ce50d1263',1,'CParams']]],
+  ['print_5ftxt',['print_txt',['../classCMesh.html#afdceeddf8a2b3d24b028407413ba19e9',1,'CMesh']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init',['init',['../classCMesh.html#a9b804b5d12d393dad221d0b8370c53f5',1,'CMesh']]]
+  ['fou',['FOU',['../classCSolver.html#a3c7d5a891aec27006c526ea13b0e7c53',1,'CSolver']]]
 ];

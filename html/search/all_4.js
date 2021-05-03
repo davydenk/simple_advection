@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['simple_5fadvection',['simple_advection',['../index.html',1,'']]],
-  ['set_5finitial_5fconditions',['set_initial_conditions',['../classCMesh.html#a10f0ad6aaaa1f3b9e814ac127fc03ca2',1,'CMesh']]]
+  ['read',['read',['../classCParams.html#a69eb70e63aa95827b93c55d59eab6e95',1,'CParams']]],
+  ['reset',['reset',['../classCMesh.html#a07e3a824f511675fcbbff1788a27c83f',1,'CMesh']]]
 ];
