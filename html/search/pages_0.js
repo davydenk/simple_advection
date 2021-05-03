@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simple_5fadvection',['simple_advection',['../index.html',1,'']]]
+  ['simple_20advection_20simulator',['Simple advection simulator',['../index.html',1,'']]]
 ];
