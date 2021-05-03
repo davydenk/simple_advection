@@ -1,0 +1,7 @@
+build/*
+latex/*
+.directory
+*.kdev4
+*.kate-swp
+*data.txt
+*.x

@@ -1,0 +1,7 @@
+domain start coordinate: 0.0
+domain end coordinate: 1000.0
+equation coefficient: 1.0
+time step: 0.1
+number of time steps: 100000
+number of cells: 1000
+intermidiate output step: 400
