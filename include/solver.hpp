@@ -2,7 +2,7 @@
 #include "mesh.hpp"
 
 /*! The class is used for solving the equation by applying a chosen 
- * descreete scheme to the mesh data. The schemes curently available are:  
+ * discrete scheme to the mesh data. The schemes curently available are:  
  * - first order upwind scheme
  */
 template <typename T>
