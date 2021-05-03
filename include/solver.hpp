@@ -23,6 +23,7 @@ public:
    * - time step
    * - the number of steps
    * - PritInterval for the output, if set to 0, no intermidiate output occurs.
+   * .
    * Currently, the output is performed in text format, so it is not adviced to print 
    * too many steps. The intermidiate output files are written to the "gif_dir" folder
    * with the names "TIME_STEP.dat".
@@ -31,6 +32,9 @@ public:
 template <typename T>
 void CSolver<T>::FOU(CMesh<T>& m, const T& eq_coeff, const T& time_step,
                        const size_t& Nsteps, const size_t& PrintInterval ) {
+  if (fabs(eq_coeff*time_step/m.step)>1){
+    std::cerr<<"WARNING: the FOU scheme is not stable with the given parameters"<<std::endl;     
+  } 
   T mult_coeff=eq_coeff*time_step/m.step;
   T time{0};
   if(eq_coeff>0){
