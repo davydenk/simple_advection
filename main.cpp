@@ -18,6 +18,7 @@ int main(int argc, char *argv[]){
     CMesh<double> data(params.Ncells);
     data.init(params.domain_start,params.domain_end);
     data.print_txt("out.txt");
+    system("mkdir -p gif_dir");
     CSolver<double> solve;
     solve.FOU(data,params.eq_coeff, params.time_step, 
               params.Nsteps, params.output_step);
