@@ -74,15 +74,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0acde4d6f327f47ff64ef1cde4559c02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMesh.html#a0acde4d6f327f47ff64ef1cde4559c02">CMesh</a> (size_t N)</td></tr>
-<tr class="separator:a0acde4d6f327f47ff64ef1cde4559c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b804b5d12d393dad221d0b8370c53f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMesh.html#a9b804b5d12d393dad221d0b8370c53f5">init</a> (const T &amp;domain_start, const T &amp;domain_end)</td></tr>
-<tr class="separator:a9b804b5d12d393dad221d0b8370c53f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8ff76f241a37c2e1944de63feacefe"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:abd8ff76f241a37c2e1944de63feacefe"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCMesh.html#abd8ff76f241a37c2e1944de63feacefe">CMesh</a> (size_t N, const T &amp;domain_start, const T &amp;domain_end, F initial_conditions)</td></tr>
+<tr class="separator:abd8ff76f241a37c2e1944de63feacefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07e3a824f511675fcbbff1788a27c83f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMesh.html#a07e3a824f511675fcbbff1788a27c83f">reset</a> ()</td></tr>
 <tr class="separator:a07e3a824f511675fcbbff1788a27c83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10f0ad6aaaa1f3b9e814ac127fc03ca2"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
-<tr class="memitem:a10f0ad6aaaa1f3b9e814ac127fc03ca2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCMesh.html#a10f0ad6aaaa1f3b9e814ac127fc03ca2">set_initial_conditions</a> (F f)</td></tr>
-<tr class="separator:a10f0ad6aaaa1f3b9e814ac127fc03ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdceeddf8a2b3d24b028407413ba19e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCMesh.html#afdceeddf8a2b3d24b028407413ba19e9">print_txt</a> (std::string file_name)</td></tr>
 <tr class="separator:afdceeddf8a2b3d24b028407413ba19e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -110,13 +106,15 @@ class CMesh&lt; T &gt;</h3>
 
 <p>This class holds both the geometrical data of the mesh and the discrete data on it. It is also responsible for setting the initial conditions and printing the data. Currently, the only output implemented is a basic .txt format. Thus, it is not advisable to output large amounts of data. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0acde4d6f327f47ff64ef1cde4559c02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0acde4d6f327f47ff64ef1cde4559c02">&#9670;&nbsp;</a></span>CMesh()</h2>
+<a id="abd8ff76f241a37c2e1944de63feacefe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8ff76f241a37c2e1944de63feacefe">&#9670;&nbsp;</a></span>CMesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -125,8 +123,30 @@ template&lt;typename T&gt; </div>
           <td class="memname"><a class="el" href="classCMesh.html">CMesh</a>&lt; T &gt;::<a class="el" href="classCMesh.html">CMesh</a> </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>N</em></td><td>)</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>domain_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>domain_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>initial_conditions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -135,45 +155,11 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This constructor takes as a parameter the number of cells we are going to work with and resizes the vectors used to store the data </p>
+<p>This constructor takes as a parameter the number of cells we are going to work with, the start and the end of the domain, and the field used to store the data with the geometrical information provided. It is also templated on a function parameter initial_conditions that is used to initialize the field variable values with the function provided. For example, if your function is called "my_inital_conditions", you need to invoke this constructor with "my_inital_conditions&lt;SOME_TYPE&gt;" as the last argument. Your function should not modify the field size, but only fill in the values. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9b804b5d12d393dad221d0b8370c53f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b804b5d12d393dad221d0b8370c53f5">&#9670;&nbsp;</a></span>init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classCMesh.html">CMesh</a>&lt; T &gt;::init </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>domain_start</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>domain_end</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This function is responsible prepairing the mesh to work:</p><ul>
-<li>initializing the geomentical data based on the physicial dimensions and the number of cells provided in a parameter file.</li>
-<li>calling the initial conditions set up. </li>
-</ul>
-
-</div>
-</div>
 <a id="afdceeddf8a2b3d24b028407413ba19e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdceeddf8a2b3d24b028407413ba19e9">&#9670;&nbsp;</a></span>print_txt()</h2>
 
@@ -220,37 +206,6 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>In case one wants to reuse the mesh variable, this functions makes it possible to reset everything to zero. </p>
-
-</div>
-</div>
-<a id="a10f0ad6aaaa1f3b9e814ac127fc03ca2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10f0ad6aaaa1f3b9e814ac127fc03ca2">&#9670;&nbsp;</a></span>set_initial_conditions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename F &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classCMesh.html">CMesh</a>&lt; T &gt;::set_initial_conditions </td>
-          <td>(</td>
-          <td class="paramtype">F&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The function is used to initialize the field variable values with the initial conditions required by means of calling function "f" that can be passed as an argument. For example, if your function is called "my_inital_conditions", you need to invoke this with set_initial_conditions(my_inital_conditions). Your function should not modify the field size, but only fill in the values. </p>
 
 </div>
 </div>

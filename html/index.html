@@ -67,15 +67,15 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p>This code performs a simple advection simulation in 1 dimention using the first order <a href="https://en.wikipedia.org/wiki/Upwind_scheme">upwind scheme</a>.</p>
 <p>The doxygen documentation is provided. To view the .html version, open the <code>documenation.html</code> file in any browser. The doxygen file <code>doxy.in</code> is included in the root folder.</p>
-<p>The current initial conditions functions available can be found the <code><a class="el" href="initial__conditions_8hpp_source.html">initial_conditions.hpp</a></code> file. The default initial conditions function is the <code>hat_function</code> from this file. Prease refer to the documentaion on the <code><a class="el" href="classCMesh.html">CMesh</a></code> class for learning to switch to different functions.</p>
+<p>The current initial conditions functions available can be found the <code><a class="el" href="initial__conditions_8hpp_source.html">initial_conditions.hpp</a></code> file. The default initial conditions function is the <code>hat_function</code> from this file. To switch to a different function, simply invoke the mesh constructor with its name.</p>
 <h2>To compile and run</h2>
-<p>The project is written in c++, at he moment only using the c++11 standart. Currently the project only has header files and can be compiled with gcc with a simple one line command: </p><pre class="fragment">g++ main.cpp -o advection.x -Iinclude
+<p>The project is written in c++, at the moment only using the c++11 standard. Currently the project only has header files and can be compiled with gcc with a simple one line command: </p><pre class="fragment">g++ main.cpp -o advection.x -Iinclude
 </pre><p>However, the <a href="https://mesonbuild.com/Manual.html">meson</a> configuration file is also provided . To compile the project with meson, do: </p><pre class="fragment">meson build (in the top directory)
 cd build
 ninja
 </pre><p>The default executable name is set to advection.x. The executable requires parameter files, the example of which can be found in the param_files folder. To run the program, do: </p><pre class="fragment">./advection.x PATH_TO_PARAM_FILE
-</pre><p>For example, from the inside of the build folder you can run: </p><pre class="fragment">./advection.x ../param_files/params_default.txt
-</pre><p>The final output is printed to the <code>result.txt</code> file. The intermidiate output files are written to the <code>gif_dir</code> folder with the names <code>TIME_STEP.dat</code>. Currently, the output is performed in text format, so it is not adviced to print too many steps. <br />
+</pre><p>For example, from the inside of the meson build folder you can run: </p><pre class="fragment">./advection.x ../param_files/params_default.txt
+</pre><p>The final output is printed to the <code>result.txt</code> file. The intermediate output files are written to the <code>gif_dir</code> folder with the names <code>TIME_STEP.dat</code>. Currently, the output is performed in text format, so it is not adviced to print too many steps. <br />
  The example gnuplot script <code>gif.gp</code> to create a gif out of the results obtained by running with the default parameters file (from the <code>param_files</code> folder) together with the resulting gif are provided in the <code>plots</code> folder.</p>
 <h2>Parameter files</h2>
 <p>The parameter files have a strict format that must be followed.</p>
@@ -84,7 +84,7 @@ ninja
 <li>domain_start</li>
 <li>domain_end</li>
 <li>equation coefficient</li>
-<li>diresed time_step</li>
+<li>desired time_step</li>
 <li>desired intermidiate output interval (0 for no intermidiate output)</li>
 </ul>
 </li>

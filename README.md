@@ -4,11 +4,11 @@ This code performs a simple advection simulation in 1 dimention using the first 
 
 The doxygen documentation is provided. To view the .html version, open the ``documenation.html`` file in any browser. The doxygen file ``doxy.in`` is included in the root folder.
 
-The current initial conditions functions available can be found the ``initial_conditions.hpp`` file. The default initial conditions function is the ``hat_function`` from this file. Prease refer to the documentaion on the ``CMesh`` class for learning to switch to different functions.
+The current initial conditions functions available can be found the ``initial_conditions.hpp`` file. The default initial conditions function is the ``hat_function`` from this file. To switch to a different function, simply invoke the mesh constructor with its name.
 
 ## To compile and run
 
-The project is written in c++, at he moment only using the c++11 standart. Currently the project only has header files and can be compiled with gcc with a simple one line command:
+The project is written in c++, at the moment only using the c++11 standard. Currently the project only has header files and can be compiled with gcc with a simple one line command:
 
     g++ main.cpp -o advection.x -Iinclude
 
@@ -22,11 +22,11 @@ The default executable name is set to advection.x. The executable requires param
 
     ./advection.x PATH_TO_PARAM_FILE
 
-For example, from the inside of the build folder you can run: 
+For example, from the inside of the meson build folder you can run: 
 
     ./advection.x ../param_files/params_default.txt
 
-The final output is printed to the ``result.txt`` file. The intermidiate output files are written to the ``gif_dir`` folder with the names ``TIME_STEP.dat``.
+The final output is printed to the ``result.txt`` file. The intermediate output files are written to the ``gif_dir`` folder with the names ``TIME_STEP.dat``.
 Currently, the output is performed in text format, so it is not adviced to print too many steps.  
 
 The example gnuplot script ``gif.gp`` to create a gif out of the results obtained by running with the default parameters file (from the ``param_files`` folder) together with the resulting gif are provided in the ``plots`` folder.
@@ -40,7 +40,7 @@ The parameter files have a strict format that must be followed.
     * domain_start
     * domain_end
     * equation coefficient
-    * diresed time_step
+    * desired time_step
     * desired intermidiate output interval (0 for no intermidiate output)
     
 2. each variable must follow the ":" symbol.The space before the ":" is best used for the variable name (and possible comments about it).

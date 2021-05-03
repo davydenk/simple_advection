@@ -24,3 +24,11 @@ void hat_function(std::vector<T>& data){
   }
 }
 
+/*!
+ * A constant function used for simple unit test
+ */
+template <typename T>
+void const_function(std::vector<T>& data){
+  std::fill(data.begin(),data.end(),0.5);
+}
+
